@@ -22,10 +22,10 @@
 
 #include "../ssimrenderer_global.h"
 
-#include <QVector3D>
+#include </usr/include/x86_64-linux-gnu/qt5/QtGui/qvector3d.h>
 #include <QHash>
 #include <QDebug>
-
+#include <cstring>
 namespace SSIMRenderer
 {
 /**

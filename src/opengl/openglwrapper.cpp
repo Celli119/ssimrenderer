@@ -175,23 +175,23 @@ double OpenGLWrapper::getLastRenderTimeDouble() const
     return lastRenderTimeDouble;
 }
 
-/**
- * @brief Returns HGLRC - handle to native OpenGL rendering context
- * @return HGLRC - handle to native OpenGL rendering context
- */
-HGLRC OpenGLWrapper::getHGLRC() const
-{
-    return hGLRC;
-}
+// *
+//  * @brief Returns HGLRC - handle to native OpenGL rendering context
+//  * @return HGLRC - handle to native OpenGL rendering context
+ 
+// HGLRC OpenGLWrapper::getHGLRC() const
+// {
+//     return hGLRC;
+// }
 
 /**
  * @brief Returns HDC - handle to the device context
  * @return HDC - handle to the device context
- */
-HDC OpenGLWrapper::getHDC() const
-{
-    return hDC;
-}
+//  */
+// HDC OpenGLWrapper::getHDC() const
+// {
+//     return hDC;
+// }
 
 /**
  * @brief Checks initialization of OpenGL context and makes context current
@@ -391,9 +391,9 @@ void OpenGLWrapper::createContext()
         context->makeCurrent(activeSurface);
         //qDebug() << context->supportsThreadedOpenGL();
 
-        hGLRC = wglGetCurrentContext();
-        hDC = wglGetCurrentDC();
-
+        // hGLRC = wglGetCurrentContext();
+        // hDC = wglGetCurrentDC();
+        QOpenGLContext *ctx = QOpenGLContext::currentContext();
         if (hasDebugExtension()) {
             logger = new QOpenGLDebugLogger();
             logger->initialize();

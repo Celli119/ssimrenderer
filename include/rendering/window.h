@@ -24,8 +24,8 @@
 
 #include "mainrenderer.h"
 
-#include <QMouseEvent>
-#include <QCoreApplication>
+#include </usr/include/x86_64-linux-gnu/qt5/QtGui/QMouseEvent>
+#include </usr/include/x86_64-linux-gnu/qt5/QtCore/QCoreApplication>
 
 namespace SSIMRenderer
 {

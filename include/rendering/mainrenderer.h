@@ -30,8 +30,8 @@
 #include "../input/statisticaldata.h"
 #include "../input/csvcoeffsfile.h"
 
-#include <QOpenGLBuffer>
-#include <QResizeEvent>
+#include </usr/include/x86_64-linux-gnu/qt5/QtGui/QOpenGLBuffer>
+#include </usr/include/x86_64-linux-gnu/qt5/QtGui/QResizeEvent>
 
 namespace SSIMRenderer
 {

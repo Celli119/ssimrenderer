@@ -18,7 +18,7 @@
  */
 
 #include "input/statisticaldata.h"
-
+#include <cstring>
 namespace SSIMRenderer
 {
 /** @brief The name of T matrix in statistical file */

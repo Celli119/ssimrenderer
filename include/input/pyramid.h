@@ -22,9 +22,9 @@
 
 #include "../ssimrenderer_global.h"
 
-#include <QVector3D>
-#include <QMatrix4x4>
-#include <QImage>
+#include </usr/include/x86_64-linux-gnu/qt5/QtGui/qvector3d.h>
+#include </usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix4x4.h>
+#include </usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h>
 #include <QtMath>
 
 namespace SSIMRenderer

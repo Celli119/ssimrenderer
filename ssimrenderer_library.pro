@@ -20,10 +20,11 @@ CONFIG += console
 CONFIG += c++11
 # Don't create new debug/release dirs in destination build directory
 CONFIG -= debug_and_release
-
+QT -= core gui 
+QT += core
 # Disable some Microsoft warnings
 DEFINES += _CRT_SECURE_NO_WARNINGS
-
+DEFINES += USE_OPENCL
 # Check Qt version
 include($$PWD/check_qt_version.pri)
 # Detect architecture and build mode (ARCH = x86/x64, BUILD_MODE = debug/release)

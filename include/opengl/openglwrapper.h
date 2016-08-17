@@ -22,13 +22,13 @@
 
 #include "../ssimrenderer_global.h"
 
-#include <QOpenGLFunctions_3_3_Core>
-#include <QOpenGLDebugLogger>
-#include <QOpenGLShader>
-#include <QOpenGLDebugLogger>
-#include <QWindow>
-#include <QOffscreenSurface>
-#include <QElapsedTimer>
+#include "/usr/include/x86_64-linux-gnu/qt5/QtGui/QOpenGLFunctions_3_3_Core"
+#include </usr/include/x86_64-linux-gnu/qt5/QtGui/QOpenGLDebugLogger>
+#include </usr/include/x86_64-linux-gnu/qt5/QtGui/QOpenGLShader>
+#include </usr/include/x86_64-linux-gnu/qt5/QtGui/QOpenGLDebugLogger>
+#include </usr/include/x86_64-linux-gnu/qt5/QtGui/QWindow>
+#include </usr/include/x86_64-linux-gnu/qt5/QtGui/QOffscreenSurface>
+#include </usr/include/x86_64-linux-gnu/qt5/QtCore/QElapsedTimer>
 
 namespace SSIMRenderer
 {
@@ -84,15 +84,15 @@ public:
     // Return last render time in doubles
     virtual double getLastRenderTimeDouble() const final;
 
-    // Returns HGLRC - handle to native OpenGL rendering context
-    virtual HGLRC getHGLRC() const final;
+    // // Returns HGLRC - handle to native OpenGL rendering context
+    // virtual HGLRC getHGLRC() const final;
 
-    // Returns HDC - handle to the device context
-    virtual HDC getHDC() const final;
+    // // Returns HDC - handle to the device context
+    // virtual HDC getHDC() const final;
 
 protected:
     /// Pure virtual render function
-    virtual void render() = 0;
+    virtual void render();
 
     /// Pure virtual initialize function
     virtual void initialize() = 0;
@@ -120,8 +120,8 @@ private:
 
     QOpenGLContext *context;
     QSurface *activeSurface;
-    HGLRC hGLRC;
-    HDC hDC;
+//    HGLRC hGLRC;
+//    HDC hDC;
     QOpenGLDebugLogger *logger;
     OpenGLWrapper *parentOpenGLWrapper;
     QList<OpenGLWrapper *> childOpenGLWrappers;
