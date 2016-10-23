@@ -22,16 +22,16 @@
         <file alias="fragmentshaderPostprocessing">../src/rendering/shaders/fragmentshaderpostprocessing.frag</file>
         <file alias="fragmentshaderPostprocessingSimple">../src/rendering/shaders/fragmentshaderpostprocessingsimple.frag</file>
 
-        <file alias="vertexshaderHistogram">../src/metric/shaders/vertexshaderhistogram.vert</file>
-        <file alias="fragmentshaderHistogram">../src/metric/shaders/fragmentshaderhistogram.frag</file>
+        <file alias="vertexshaderHistogram">../src/metric/shaders/vertexshaderHistogram.vert</file>
+        <file alias="fragmentshaderHistogram">../src/metric/shaders/fragmentshaderHistogram.frag</file>
 
-        <file alias="vertexshaderJointHistogram">../src/metric/shaders/vertexshaderjointhistogram.vert</file>
-        <file alias="fragmentshaderJointHistogram">../src/metric/shaders/fragmentshaderjointhistogram.frag</file>
+        <file alias="vertexshaderJointHistogram">../src/metric/shaders/vertexshaderJointHistogram.vert</file>
+        <file alias="fragmentshaderJointHistogram">../src/metric/shaders/fragmentshaderJointHistogram.frag</file>
 
-        <file alias="vertexshaderEntropy">../src/metric/shaders/vertexshaderentropy.vert</file>
-        <file alias="fragmentshaderEntropy">../src/metric/shaders/fragmentshaderentropy.frag</file>
+        <file alias="vertexshaderEntropy">../src/metric/shaders/vertexshaderEntropy.vert</file>
+        <file alias="fragmentshaderEntropy">../src/metric/shaders/fragmentshaderEntropy.frag</file>
 
-        <file alias="vertexshaderSSD">../src/metric/shaders/vertexshaderssd.vert</file>
-        <file alias="fragmentshaderSSD">../src/metric/shaders/fragmentshaderssd.frag</file>
+        <file alias="vertexshaderSSD">../src/metric/shaders/vertexshaderSSD.vert</file>
+        <file alias="fragmentshaderSSD">../src/metric/shaders/fragmentshaderSSD.frag</file>
     </qresource>
 </RCC>
