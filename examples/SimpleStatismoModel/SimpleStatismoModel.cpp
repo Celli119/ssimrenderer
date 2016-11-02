@@ -17,7 +17,7 @@
 
 #include <QApplication>
 #include <QDebug>
-#include <ssimrenderer.h>
+#include "ssimrenderer.h"
 
 /**
  * @brief Main function

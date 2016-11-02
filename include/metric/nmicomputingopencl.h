@@ -22,11 +22,16 @@
 #ifndef SSIMR_NMICOMPUTINGOPENCL_H
 #define SSIMR_NMICOMPUTINGOPENCL_H
 
-#include "../ssimrenderer_global.h"
+#include "ssimrenderer_global.h"
 
 #include "nmiwrapper.h"
-#include "../opencl/openclwrapper.h"
+#include "opencl/openclwrapper.h"
+#include <GL/glx.h>
+#define CL_USE_DEPRECATED_OPENCL_2_0_APIS
 
+#include <CL/cl2.hpp>
+#include <CL/cl_gl.h>
+#include <QApplication>
 namespace SSIMRenderer
 {
 /**

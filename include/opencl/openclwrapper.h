@@ -35,9 +35,10 @@
 /// Helper OpenCL macro
 #define CL_USE_DEPRECATED_OPENCL_2_0_APIS
 
-#include </usr/local/cuda-7.5/include/CL/cl.hpp>
-#include </usr/local/cuda-7.5/include/CL/cl_gl.h>
+#include <CL/cl_gl.h>
+#include <CL/cl2.hpp>
 
+#include <QtWidgets/QApplication>
 namespace SSIMRenderer
 {
 /**

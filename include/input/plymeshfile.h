@@ -24,7 +24,7 @@
 
 #include "mesh.h"
 
-#include <ply.h>
+#include <rply.h>
 
 namespace SSIMRenderer
 {

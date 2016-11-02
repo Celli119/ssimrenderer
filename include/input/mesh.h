@@ -20,7 +20,7 @@
 #ifndef SSIMR_MESH_H
 #define SSIMR_MESH_H
 
-#include "../ssimrenderer_global.h"
+#include "ssimrenderer_global.h"
 
 #include </usr/include/x86_64-linux-gnu/qt5/QtGui/qvector3d.h>
 #include <QHash>

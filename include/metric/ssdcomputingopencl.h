@@ -24,6 +24,7 @@
 
 #include "ssdwrapper.h"
 #include "../opencl/openclwrapper.h"
+#include <GL/glx.h>
 
 namespace SSIMRenderer
 {
