@@ -92,7 +92,7 @@ public:
 
 protected:
     /// Pure virtual render function
-    virtual void render();
+    virtual void render() = 0;
 
     /// Pure virtual initialize function
     virtual void initialize() = 0;
