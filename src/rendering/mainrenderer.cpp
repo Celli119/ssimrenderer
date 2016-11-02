@@ -1651,6 +1651,16 @@ Mesh *MainRenderer::getMesh() const
     return mesh;
 }
 
+}
+
+static void prepResource()
+{
+   Q_INIT_RESOURCE(shaders);
+}
+
+namespace SSIMRenderer
+{
+
 /**
  * @brief Main initialze function
  *
@@ -1659,7 +1669,7 @@ Mesh *MainRenderer::getMesh() const
 void MainRenderer::initialize()
 {
     // Important for resources in library
-    Q_INIT_RESOURCE(shaders);
+    ::prepResource();
 
     // Get max texture and viewport dims
     GLint dimsV[2], dimT;

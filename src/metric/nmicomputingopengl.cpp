@@ -249,13 +249,25 @@ QImage NMIComputingOpenGL::getRenderingOutputImageHistogramImage()
     return image;
 }
 
+
+}
+
+static void prepResource()
+{
+   Q_INIT_RESOURCE(shaders);
+}
+
+namespace SSIMRenderer
+{
+
+
 /**
  * @brief Initializes OpenGL resources, sets shared OpenGL context and initializes other stuff
  */
 void NMIComputingOpenGL::initialize()
 {
     // Important for resources in library
-    Q_INIT_RESOURCE(shaders);
+    ::prepResource();
 
     histogram = new Histogram();
     histogram->program = 0;

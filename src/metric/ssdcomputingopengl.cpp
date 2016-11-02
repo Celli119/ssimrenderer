@@ -102,13 +102,25 @@ void SSDComputingOpenGL::setRenderingOutputImage(const QImage &image)
     renderingOutputImageLoaded = true;
 }
 
+
+}
+
+static void prepResource()
+{
+   Q_INIT_RESOURCE(shaders);
+}
+
+namespace SSIMRenderer
+{
+
+
 /**
  * @brief Initializes OpenGL resources, sets shared OpenGL context and initializes other stuff
  */
 void SSDComputingOpenGL::initialize()
 {
     // Important for resources in library
-    Q_INIT_RESOURCE(shaders);
+    ::prepResource();
 
     sumOfSquaredDifferences = new SumOfSquaredDifferences();
     sumOfSquaredDifferences->program = 0;
