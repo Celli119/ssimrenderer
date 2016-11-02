@@ -125,7 +125,7 @@ void SSDComputingOpenCL::initialize()
         glBindTexture(GL_TEXTURE_2D, 0);
 
         // Create shared context
-        OpenCLWrapper::createContext(parentOpenGLWrapper->getHGLRC(), parentOpenGLWrapper->getHDC());
+        OpenCLWrapper::createContext((cl_context_properties)glXGetCurrentContext(), (cl_context_properties)glXGetCurrentDisplay());
 
         clMemRenderingOutputImage = clCreateFromGLTexture2D(getNativeContext(), CL_MEM_READ_ONLY, GL_TEXTURE_2D, 0, toRenderingOutput, &error);
         checkError(error, "clCreateFromGLTexture2D()");

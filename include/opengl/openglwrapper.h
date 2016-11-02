@@ -84,11 +84,11 @@ public:
     // Return last render time in doubles
     virtual double getLastRenderTimeDouble() const final;
 
-    // // Returns HGLRC - handle to native OpenGL rendering context
-    // virtual HGLRC getHGLRC() const final;
+    // // // Returns HGLRC - handle to native OpenGL rendering context
+    // virtual CL_GL_CONTEXT_KHR getHGLRC() const final;
 
-    // // Returns HDC - handle to the device context
-    // virtual HDC getHDC() const final;
+    // // // Returns HDC - handle to the device context
+    // virtual CL_GLX_DISPLAY_KHR getHDC() const final;
 
 protected:
     /// Pure virtual render function

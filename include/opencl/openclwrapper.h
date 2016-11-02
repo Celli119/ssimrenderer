@@ -61,7 +61,7 @@ protected:
     virtual void init() final;
 
     // Creates context
-    virtual void createContext(HGLRC hGLRC, HDC hDC) final;
+    // virtual void createContext(HGLRC hGLRC, HDC hDC) final;
     virtual void createContext(cl_context_properties hGLRC, cl_context_properties hDC) final;
     virtual void createContext() final;
 

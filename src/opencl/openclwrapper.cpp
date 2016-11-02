@@ -94,15 +94,15 @@ void OpenCLWrapper::init()
     defaultDevice = defaultDevices[0];
 }
 
-/**
- * @brief Creates shared OpenCL context with HGLRC and HDC
- * @param[in] hGLRC Handle to native OpenGL rendering contex
- * @param[in] hDC Handle to the device context
- */
-void OpenCLWrapper::createContext(HGLRC hGLRC, HDC hDC)
-{
-    createContext((cl_context_properties) hGLRC, (cl_context_properties) hDC);
-}
+// // *
+// //  * @brief Creates shared OpenCL context with HGLRC and HDC
+// //  * @param[in] hGLRC Handle to native OpenGL rendering contex
+// //  * @param[in] hDC Handle to the device context
+ 
+// void OpenCLWrapper::createContext(CL_GL_CONTEXT_KHR hGLRC, CL_GLX_DISPLAY_KHR hDC)
+// {
+//     createContext((cl_context_properties) hGLRC, (cl_context_properties) hDC);
+// }
 
 /**
  * @brief Creates shared OpenCL context with HGLRC and HDC
@@ -152,7 +152,7 @@ void OpenCLWrapper::createContext(cl_context_properties hGLRC, cl_context_proper
         // Create CL context properties, add WGL context & handle to DC
         cl_context_properties properties[] = {
             CL_GL_CONTEXT_KHR,      (cl_context_properties) hGLRC,              // WGL Context
-            CL_WGL_HDC_KHR,         (cl_context_properties) hDC,                // WGL HDC
+            CL_GLX_DISPLAY_KHR,         (cl_context_properties) hDC,                // WGL HDC
             CL_CONTEXT_PLATFORM,    (cl_context_properties) platforms[p](),     // OpenCL platform
             0
         };

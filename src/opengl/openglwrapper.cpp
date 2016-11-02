@@ -175,22 +175,22 @@ double OpenGLWrapper::getLastRenderTimeDouble() const
     return lastRenderTimeDouble;
 }
 
-// *
-//  * @brief Returns HGLRC - handle to native OpenGL rendering context
-//  * @return HGLRC - handle to native OpenGL rendering context
+// // *
+// //  * @brief Returns HGLRC - handle to native OpenGL rendering context
+// //  * @return HGLRC - handle to native OpenGL rendering context
  
-// HGLRC OpenGLWrapper::getHGLRC() const
+// CL_GL_CONTEXT_KHR OpenGLWrapper::getHGLRC() const
 // {
-//     return hGLRC;
+//     return glXGetCurrentContext();
 // }
 
-/**
- * @brief Returns HDC - handle to the device context
- * @return HDC - handle to the device context
+// /**
+//  * @brief Returns HDC - handle to the device context
+//  * @return HDC - handle to the device context
 //  */
-// HDC OpenGLWrapper::getHDC() const
+// CL_GLX_DISPLAY_KHR OpenGLWrapper::getHDC() const
 // {
-//     return hDC;
+//     return glXGetCurrentDisplay();
 // }
 
 /**
