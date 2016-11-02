@@ -64,10 +64,8 @@ namespace SSIMRenderer {}
 #include "metric/ssdcomputingopengl.h"
 #include "metric/ssdcomputingcpu.h"
 
-#ifdef USE_OPENCL
-    #include "opencl/openclwrapper.h"
-    #include "metric/nmicomputingopencl.h"
-    #include "metric/ssdcomputingopencl.h"
-#endif // USE_OPENCL
+#include "opencl/openclwrapper.h"
+#include "metric/nmicomputingopencl.h"
+#include "metric/ssdcomputingopencl.h"
 
 #endif // SSIMRENDERER_H

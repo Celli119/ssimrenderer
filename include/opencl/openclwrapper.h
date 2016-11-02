@@ -17,7 +17,6 @@
  *
  */
 
-#ifdef USE_OPENCL
 #ifndef SSIMR_OPENCLWRAPPER_H
 #define SSIMR_OPENCLWRAPPER_H
 
@@ -107,4 +106,3 @@ private:
 }
 
 #endif // SSIMR_OPENCLWRAPPER_H
-#endif // USE_OPENCL

@@ -17,7 +17,6 @@
  *
  */
 
-#ifdef USE_OPENCL
 #include "opencl/openclwrapper.h"
 
 namespace SSIMRenderer
@@ -524,5 +523,3 @@ QString OpenCLWrapper::getDeviceTypeString(cl_device_type type) const
     }
 }
 }
-
-#endif // USE_OPENCL
