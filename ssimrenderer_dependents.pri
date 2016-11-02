@@ -1,18 +1,16 @@
 INCLUDEPATH += \
-    $$PWD/3rdparty/HDF5/include \
-    $$PWD/3rdparty/lm6/include \
-    $$PWD/3rdparty/ply/include \
-    $$PWD/3rdparty/matio/include \
-    $$PWD/3rdparty/zlib/include \
+    /usr/include/hdf5/serial \
     $$PWD/include \
     $$PWD \
 
-LIBS += \
-    -L"$$PWD/3rdparty/HDF5/lib/$$ARCH/$$BUILD_MODE" -lhdf5 \
-    -L"$$PWD/3rdparty/lm6/lib/$$ARCH/$$BUILD_MODE" -llm6 \
-    -L"$$PWD/3rdparty/ply/lib/$$ARCH/$$BUILD_MODE" -lply \
-    -L"$$PWD/3rdparty/matio/lib/$$ARCH/$$BUILD_MODE" -lmatio \
-    -L"$$PWD/3rdparty/zlib/lib/$$ARCH/$$BUILD_MODE" -lzlibstatic \
+LIBS += -L/usr/local/lib \
+	-L/home/girinon/ssimrenderer -lssimrenderer \
+    -L/usr/lib/x86_64-linux-gnu/hdf5/serial -lhdf5 \
+    -L/usr/local/lib/ -lmesh6 \
+    -lrply \
+    -lmatio \
+    -lz
+
 
 contains(OPENCL, true) {
     include("$$PWD/../opencl.pri")

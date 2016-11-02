@@ -32,6 +32,8 @@ include($$PWD/detect_arch_and_build_mode.pri)
 
 # Ignore warning LNK4099: PDB 'vc*.pdb' was not found with...
 QMAKE_LFLAGS += /ignore:4099
+QMAKE_CFLAGS = -I/usr/include/hdf5/serial -Iinclude -I. -I.. -I../..
+QMAKE_CXXFLAGS = -I/usr/include/hdf5/serial -Iinclude -I. -I.. -I../..
 
 TARGET = ssimrenderer
 TEMPLATE = lib
@@ -173,15 +175,15 @@ RESOURCES += \
 # Dependents
 include(ssimrenderer_dependents.pri)
 
-# Copy built library files to destination
-QMAKE_POST_LINK += ($(CHK_DIR_EXISTS) \"$$PWD/lib/$$ARCH\" $(MKDIR) \"$$PWD/lib/$$ARCH\") &
-QMAKE_POST_LINK += ($(CHK_DIR_EXISTS) \"$$PWD/lib/$$ARCH/$$BUILD_MODE\" $(MKDIR) \"$$PWD/lib/$$ARCH/$$BUILD_MODE\") &
-#QMAKE_POST_LINK += $${QMAKE_COPY} \"$$OUT_PWD\\$$BUILD_MODE\\$${TARGET}.lib\" \"$$PWD\\lib\\$$ARCH\\$$BUILD_MODE\\$${TARGET}.lib\" &
-QMAKE_POST_LINK += $${QMAKE_COPY} \"$$OUT_PWD\\$${TARGET}.lib\" \"$$PWD\\lib\\$$ARCH\\$$BUILD_MODE\\$${TARGET}.lib\" &
+# # Copy built library files to destination
+# QMAKE_POST_LINK += ($(CHK_DIR_EXISTS) \"$$PWD/lib/$$ARCH\" $(MKDIR) \"$$PWD/lib/$$ARCH\") &
+# QMAKE_POST_LINK += ($(CHK_DIR_EXISTS) \"$$PWD/lib/$$ARCH/$$BUILD_MODE\" $(MKDIR) \"$$PWD/lib/$$ARCH/$$BUILD_MODE\") &
+# #QMAKE_POST_LINK += $${QMAKE_COPY} \"$$OUT_PWD\\$$BUILD_MODE\\$${TARGET}.lib\" \"$$PWD\\lib\\$$ARCH\\$$BUILD_MODE\\$${TARGET}.lib\" &
+# QMAKE_POST_LINK += $${QMAKE_COPY} \"$$OUT_PWD\\$${TARGET}.lib\" \"$$PWD\\lib\\$$ARCH\\$$BUILD_MODE\\$${TARGET}.lib\" &
 
-contains(TYPE, shared) {
-    QMAKE_POST_LINK += ($(CHK_DIR_EXISTS) \"$$PWD/bin/$$ARCH\" $(MKDIR) \"$$PWD/bin/$$ARCH\") &
-    QMAKE_POST_LINK += ($(CHK_DIR_EXISTS) \"$$PWD/bin/$$ARCH/$$BUILD_MODE\" $(MKDIR) \"$$PWD/bin/$$ARCH/$$BUILD_MODE\") &
-    #QMAKE_POST_LINK += $${QMAKE_COPY} \"$$OUT_PWD\\$$BUILD_MODE\\$${TARGET}.dll\" \"$$PWD\\bin\\$$ARCH\\$$BUILD_MODE\\$${TARGET}.dll\"
-    QMAKE_POST_LINK += $${QMAKE_COPY} \"$$OUT_PWD\\$${TARGET}.dll\" \"$$PWD\\bin\\$$ARCH\\$$BUILD_MODE\\$${TARGET}.dll\"
-}
+# contains(TYPE, shared) {
+#     QMAKE_POST_LINK += ($(CHK_DIR_EXISTS) \"$$PWD/bin/$$ARCH\" $(MKDIR) \"$$PWD/bin/$$ARCH\") &
+#     QMAKE_POST_LINK += ($(CHK_DIR_EXISTS) \"$$PWD/bin/$$ARCH/$$BUILD_MODE\" $(MKDIR) \"$$PWD/bin/$$ARCH/$$BUILD_MODE\") &
+#     #QMAKE_POST_LINK += $${QMAKE_COPY} \"$$OUT_PWD\\$$BUILD_MODE\\$${TARGET}.dll\" \"$$PWD\\bin\\$$ARCH\\$$BUILD_MODE\\$${TARGET}.dll\"
+#     QMAKE_POST_LINK += $${QMAKE_COPY} \"$$OUT_PWD\\$${TARGET}.dll\" \"$$PWD\\bin\\$$ARCH\\$$BUILD_MODE\\$${TARGET}.dll\"
+# }

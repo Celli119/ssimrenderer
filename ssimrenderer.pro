@@ -13,3 +13,4 @@ SUBDIRS = \
     ./ssimrenderer_examples.pro \
 
 CONFIG += ordered
+# QMAKE_CXXFLAGS = -I/usr/include/hdf5/serial
